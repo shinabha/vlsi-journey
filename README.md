@@ -1,7 +1,7 @@
 ---
 
 ## ✅ Project 1 — 2:1 MUX (Multiplexer)
-**Date:** 03 Oct 2026
+**Date:** 05 Oct 2026
 
 ### What is a 2:1 MUX?
 A selector circuit with 2 inputs (a, b), 1 select line (sel),
