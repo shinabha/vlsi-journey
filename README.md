@@ -1,5 +1,3 @@
----
-
 ## ✅ Project 1 — 2:1 MUX (Multiplexer)
 **Date:** 05 Oct 2026
 
@@ -38,7 +36,8 @@ endmodule
 - Ternary operator `sel ? b : a` maps directly to MUX logic
 - Difference between `wire` (combinational output) and `reg` (testbench inputs)
 - How to dump `.vcd` file and read waveforms in GTKWave
-  ---
+
+---
 
 ## ✅ Project 2 — 4:1 MUX (Multiplexer)
 **Date:** 06 Nov 2026
@@ -61,18 +60,18 @@ Extends the 2:1 MUX — 4 inputs (i0, i1, i2, i3),
 ![HDLBits success](images/mux2to1_hdlbits.png)
 
 ### Verification — All test cases passed ✓
-| Time | s1 | s0 | y | Result |
-|------|----|----|---|--------|
-| 0s   | 0  | 0  | 1 | ✓ |
-| 10s  | 0  | 1  | 0 | ✓ |
-| 20s  | 1  | 0  | 0 | ✓ |
-| 30s  | 1  | 1  | 0 | ✓ |
+| Time | s1 | s0 | i0 | i1 | i2 | i3 | y | Result |
+|------|----|----|----|----|----|-----|---|--------|
+| 0s   | 0  | 0  | 1  | x  | x  | x  | 1 | ✓ |
+| 10s  | 0  | 1  | x  | 0  | x  | x  | 0 | ✓ |
+| 20s  | 1  | 0  | x  | x  | 0  | x  | 0 | ✓ |
+| 30s  | 1  | 1  | x  | x  | x  | 0  | 0 | ✓ |
 
 ### What I learned
 - How to extend a 2:1 MUX to 4:1 using 2 select lines
 - Two select lines can encode 4 states: 00, 01, 10, 11
 - HDLBits runs your Verilog against hundreds of hidden test cases
-  — Mismatch = 0 means every single one passed
+- Mismatch = 0 means every single one passed
 
 ---
 
@@ -80,3 +79,4 @@ Extends the 2:1 MUX — 4 inputs (i0, i1, i2, i3),
 | Problem | Status |
 |---------|--------|
 | 2:1 MUX (mux2to1) | ✅ Solved |
+| 4:1 MUX (mux4to1) | ✅ Solved |
