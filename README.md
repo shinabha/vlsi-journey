@@ -79,4 +79,46 @@ Extends the 2:1 MUX — 4 inputs (i0, i1, i2, i3),
 | Problem | Status |
 |---------|--------|
 | 2:1 MUX (mux2to1) | ✅ Solved |
-| 4:1 MUX (mux4to1) | ✅ Solved |
+| 2:1 MUX — 100-bit input [99:0] | Multiplexer (bus) | ✅ Solved |
+---
+
+## ✅ Project 3 — 4-bit Adder
+**Date:** 07 Nov 2026
+
+### What is a 4-bit Adder?
+Adds two 4-bit numbers (a, b) and produces a 4-bit sum
+and a carry_out bit for overflow detection.
+- If result exceeds 4 bits (>15), carry_out = 1
+
+### Terminal Output
+![4-bit Adder terminal](images/adder4bit_terminal.png)
+
+### GTKWave Waveform
+![4-bit Adder waveform](images/adder4bit_waveform.png)
+
+### Verification — All 4 test cases passed ✓
+| a | b | sum | carry | Check |
+|---|---|-----|-------|-------|
+| 3 | 5 | 8   | 0 | ✓ |
+| 7 | 1 | 8   | 0 | ✓ |
+| 15 | 1 | 0  | 1 | ✓ overflow |
+| 5 | 5 | 10  | 0 | ✓ |
+
+### What I learned
+- `assign {carry_out, sum} = a + b` — concatenation operator
+  packs carry and sum into one expression
+- Overflow: when two 4-bit numbers exceed 15, carry_out = 1
+- GTKWave shows bus values in hex by default —
+  'F' means 15, 'A' means 10, '8' means 8
+
+---
+
+## 🏆 HDLBits Progress
+| Problem | Topic | Status |
+|---------|-------|--------|
+| 2:1 MUX — single bit input | Multiplexer | ✅ Solved |
+| 2:1 MUX — 100-bit input [99:0] | Multiplexer (bus) | ✅ Solved |
+| Half Adder (hadd) | Combinational Logic | ✅ Solved |
+
+### Half Adder — HDLBits Result
+![Half Adder HDLBits](images/hadd_hdlbits.png)
