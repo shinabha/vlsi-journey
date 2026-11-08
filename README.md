@@ -122,3 +122,60 @@ and a carry_out bit for overflow detection.
 
 ### Half Adder — HDLBits Result
 ![Half Adder HDLBits](images/hadd_hdlbits.png)
+---
+
+## ✅ Week 2 — Sequential Logic
+
+## ✅ Project 4 — D Flip-Flop (DFF)
+**Date:** 08 Nov 2026
+
+### What is a D Flip-Flop?
+The most fundamental memory element in digital design.
+Unlike combinational circuits (MUX, Adder) that respond
+instantly to inputs, a DFF captures input only at the
+rising edge of the clock — and holds that value until
+the next rising edge.
+
+- Combinational: output changes immediately when input changes
+- Sequential: output changes only on clock rising edge
+
+This is how ALL registers, CPUs, and memory work at the
+hardware level.
+
+### Key Verilog Concept
+```verilog
+always @(posedge clk) begin
+    q <= d;    // non-blocking assignment
+end
+```
+`<=` is non-blocking assignment — used inside clocked
+always blocks. This is different from `=` (blocking).
+
+### Terminal Output
+![DFF terminal](images/dff_terminal.png)
+
+### GTKWave Waveform
+![DFF waveform](images/dff_waveform.png)
+
+### HDLBits — DFF Result
+![DFF HDLBits](images/dff_hdlbits.png)
+
+### What I learned
+- `always @(posedge clk)` — triggers only on rising clock edge
+- `<=` non-blocking vs `=` blocking assignment
+- Unknown state `x` (red in GTKWave) — flip-flop has no
+  value before first clock edge
+- Sequential circuits have MEMORY — output depends on
+  both current input AND previous state
+- This is the building block of every register, CPU
+  pipeline stage, and state machine
+
+---
+
+## 🏆 HDLBits Progress
+| Problem | Topic | Status |
+|---------|-------|--------|
+| 2:1 MUX — single bit | Multiplexer | ✅ Solved |
+| 2:1 MUX — 100-bit [99:0] | Multiplexer (bus) | ✅ Solved |
+| Half Adder (hadd) | Combinational Logic | ✅ Solved |
+| D Flip-Flop (dff) | Sequential Logic | ✅ Solved |
