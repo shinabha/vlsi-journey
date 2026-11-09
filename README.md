@@ -179,3 +179,49 @@ always blocks. This is different from `=` (blocking).
 | 2:1 MUX — 100-bit [99:0] | Multiplexer (bus) | ✅ Solved |
 | Half Adder (hadd) | Combinational Logic | ✅ Solved |
 | D Flip-Flop (dff) | Sequential Logic | ✅ Solved |
+---
+
+## ✅ Project 5 — 4-bit Register
+**Date:** 09 Nov 2026
+
+### What is a 4-bit Register?
+Four D Flip-Flops connected in parallel — stores a
+4-bit value on every rising clock edge.
+Adds a synchronous reset: when rst=1, output clears
+to 0000 on the next rising clock edge.
+
+### Terminal Output
+![4-bit Register terminal](images/register4bit_terminal.png)
+
+### GTKWave Waveform
+![4-bit Register waveform](images/register4bit_waveform.png)
+
+### HDLBits — 8-bit Register (dff8)
+![dff8 HDLBits](images/dff8_hdlbits.png)
+
+### Verification — All test cases passed ✓
+| d (hex) | rst | q (hex) | Result |
+|---------|-----|---------|--------|
+| 0 | 1 | 0 | ✓ reset |
+| 5 | 0 | 5 | ✓ captured |
+| A | 0 | A | ✓ captured |
+| F | 1 | 0 | ✓ reset mid-op |
+| 3 | 0 | 3 | ✓ captured |
+
+### What I learned
+- A register = multiple flip-flops working in parallel
+- Synchronous reset: clears output only on rising clock edge
+- GTKWave shows bus values in hex: A=10, F=15
+- `q <= 0` inside clocked block = synchronous clear
+- One `always @(posedge clk)` block controls all 4 bits
+
+---
+
+## 🏆 HDLBits Progress
+| Problem | Topic | Status |
+|---------|-------|--------|
+| 2:1 MUX — single bit | Multiplexer | ✅ Solved |
+| 2:1 MUX — 100-bit [99:0] | Multiplexer (bus) | ✅ Solved |
+| Half Adder (hadd) | Combinational Logic | ✅ Solved |
+| D Flip-Flop (dff) | Sequential Logic | ✅ Solved |
+| 8-bit Register (dff8) | Sequential Logic | ✅ Solved |
