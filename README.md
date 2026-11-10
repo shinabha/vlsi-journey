@@ -225,3 +225,43 @@ to 0000 on the next rising clock edge.
 | Half Adder (hadd) | Combinational Logic | ✅ Solved |
 | D Flip-Flop (dff) | Sequential Logic | ✅ Solved |
 | 8-bit Register (dff8) | Sequential Logic | ✅ Solved |
+---
+
+## ✅ Project 6 — 4-bit Counter
+**Date:** 10 Nov 2026
+
+### What is a 4-bit Counter?
+A sequential circuit that increments its value by 1
+on every rising clock edge — counting 0→1→2→...→F→0.
+Wraps around automatically at 15 (1111) back to 0 (0000).
+Synchronous reset clears count to 0 on next rising edge.
+
+### Terminal Output
+![4-bit Counter terminal](images/counter4bit_terminal.png)
+
+### GTKWave Waveform
+![4-bit Counter waveform](images/counter4bit_waveform.png)
+
+### HDLBits — count15
+![count15 HDLBits](images/count15_hdlbits.png)
+
+### What I learned
+- `q <= q + 1` increments a register each clock cycle
+- Counter wraps: 1111 + 1 = 10000, but only 4 bits
+  stored so it becomes 0000 automatically
+- Full count sequence visible in GTKWave:
+  0→1→2→3→4→5→6→7→8→9→A→B→C→D→E→F→0
+- Reset at any point mid-count → immediately back to 0
+- This is the foundation of timers and PWM in real hardware
+
+---
+
+## 🏆 HDLBits Progress
+| Problem | Topic | Status |
+|---------|-------|--------|
+| 2:1 MUX — single bit | Multiplexer | ✅ Solved |
+| 2:1 MUX — 100-bit [99:0] | Multiplexer (bus) | ✅ Solved |
+| Half Adder (hadd) | Combinational Logic | ✅ Solved |
+| D Flip-Flop (dff) | Sequential Logic | ✅ Solved |
+| 8-bit Register (dff8) | Sequential Logic | ✅ Solved |
+| 4-bit Counter (count15) | Sequential Logic | ✅ Solved |
