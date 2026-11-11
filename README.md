@@ -265,3 +265,45 @@ Synchronous reset clears count to 0 on next rising edge.
 | D Flip-Flop (dff) | Sequential Logic | ✅ Solved |
 | 8-bit Register (dff8) | Sequential Logic | ✅ Solved |
 | 4-bit Counter (count15) | Sequential Logic | ✅ Solved |
+
+---
+
+## ✅ Week 3 — FSM Design
+
+## ✅ Project 7 — Traffic Light Controller (FSM)
+**Date:** 11 Nov 2026
+
+### What is an FSM?
+A Finite State Machine — a circuit that moves between
+defined states based on clock and inputs.
+Unlike a counter (which just increments), an FSM can
+make decisions and follow different paths.
+
+Traffic Light states:
+- 00 = RED   (stop)
+- 01 = GREEN (go)
+- 10 = YELLOW (slow down)
+
+Cycle: RED → GREEN → YELLOW → RED → ...
+
+### Terminal Output
+![Traffic Light terminal](images/trafficlight_terminal.png)
+
+### GTKWave Waveform
+![Traffic Light waveform](images/trafficlight_waveform.png)
+
+### Verification ✓
+- State transitions: RED→GREEN→YELLOW→RED cycling ✓
+- Reset at any state → returns to RED immediately ✓
+- light[1:0] encoding correct: 00/01/10 ✓
+
+### What I learned
+- FSM needs two always blocks:
+  (1) sequential: state register (clocked)
+  (2) combinational: next state logic + output logic
+- Moore machine: output depends only on current state
+- State encoding: 2 bits can represent 4 states
+- Reset forces FSM to known initial state — critical
+  for real hardware startup behaviour
+- This is how CPU control units, protocol handlers,
+  and digital controllers work at RTL level
