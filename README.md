@@ -305,5 +305,17 @@ Cycle: RED → GREEN → YELLOW → RED → ...
 - State encoding: 2 bits can represent 4 states
 - Reset forces FSM to known initial state — critical
   for real hardware startup behaviour
+  ## 🏆 HDLBits Progress
+| Problem | Topic | Status |
+|---------|-------|--------|
+| 2:1 MUX — single bit | Multiplexer | ✅ Solved |
+| 2:1 MUX — 100-bit [99:0] | Multiplexer (bus) | ✅ Solved |
+| Half Adder (hadd) | Combinational Logic | ✅ Solved |
+| D Flip-Flop (dff) | Sequential Logic | ✅ Solved |
+| 8-bit Register (dff8) | Sequential Logic | ✅ Solved |
+| 4-bit Counter (count15) | Sequential Logic | ✅ Solved |
+| Moore FSM (fsm1) | FSM Design | ✅ Solved |
 - This is how CPU control units, protocol handlers,
   and digital controllers work at RTL level
+  
+  
