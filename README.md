@@ -305,6 +305,28 @@ Cycle: RED → GREEN → YELLOW → RED → ...
 - State encoding: 2 bits can represent 4 states
 - Reset forces FSM to known initial state — critical
   for real hardware startup behaviour
+---
+
+## 📝 Day 8 — 12 Nov 2026
+
+**What I did today:**
+- Solved Moore FSM (fsm1) on HDLBits — Status: Success ✓
+- Studied the difference between Moore and Mealy machines
+- Analysed the timing diagram: Moore output changes one
+  clock cycle after input — output depends only on state,
+  not directly on input
+
+**Key concept learned:**
+- Moore machine: output = f(current state) only
+- Mealy machine: output = f(current state + input)
+- Async reset vs sync reset — async responds immediately
+  without waiting for clock edge
+
+**HDLBits problem solved:**
+![fsm1 HDLBits](images/fsm1_hdlbits.png)
+
+**Tomorrow:** UART Transmitter — start bit, data bits,
+stop bit, baud rate logic
   ## 🏆 HDLBits Progress
 | Problem | Topic | Status |
 |---------|-------|--------|
