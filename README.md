@@ -321,6 +321,9 @@ Cycle: RED → GREEN → YELLOW → RED → ...
 - Mealy machine: output = f(current state + input)
 - Async reset vs sync reset — async responds immediately
   without waiting for clock edge
+  - This is how CPU control units, protocol handlers,
+  and digital controllers work at RTL level
+  
 
 **HDLBits problem solved:**
 ![fsm1 HDLBits](images/fsm1_hdlbits.png)
@@ -337,7 +340,5 @@ stop bit, baud rate logic
 | 8-bit Register (dff8) | Sequential Logic | ✅ Solved |
 | 4-bit Counter (count15) | Sequential Logic | ✅ Solved |
 | Moore FSM (fsm1) | FSM Design | ✅ Solved |
-- This is how CPU control units, protocol handlers,
-  and digital controllers work at RTL level
-  
+
   
