@@ -20,11 +20,15 @@
 3. V=12V, I=3A → R = 4Ω
 
 ## Quiz Results
-Q1. V=6V, R=3Ω → I = 2A ✅
-Q2. V=20V, I=4A → R = 5Ω ✅
-Q3. R=100Ω, I=0.1A → V = 10V ✅
-Q4. Resistance increases → current decreases (inversely proportional) ✅
-Score: 4/4
+
+| Question | Answer | Result |
+|----------|--------|--------|
+| Q1. V=6V, R=3Ω → I = ? | 2A | ✅ |
+| Q2. V=20V, I=4A → R = ? | 5Ω | ✅ |
+| Q3. R=100Ω, I=0.1A → V = ? | 10V | ✅ |
+| Q4. Resistance increases, V constant → current? | Decreases (inversely proportional) | ✅ |
+
+Score: 4 / 4
 
 ## VLSI Connection
 Every wire on a chip has resistance. Transistors control current using voltage.
